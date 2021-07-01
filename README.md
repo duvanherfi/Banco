@@ -1,6 +1,8 @@
 ## Acerca de Banco
 Para ejecutar el proyecto debemos colocar las credenciales de la base de datos.
+
 ###1. Copiar archivo .env.example a .env.
+
 ###2. Cambiar DB_HOST por la ruta del servidor de base de datos.
 ```angular2html
 DB_HOST=127.0.0.1
