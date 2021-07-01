@@ -1,13 +1,8 @@
 window._ = require('lodash');
-window.$ = require('jquery');
-import {Popper} from '@popperjs/core/dist/umd/popper.js';
+window.$ = window.jQuery = require('jquery');
+window.dt = require('datatables.net');
 
-try {
-    window.$ = window.jQuery = require('jquery');
-    window.Popper = Popper;
-    require('bootstrap/dist/js/bootstrap.min.js');
-
-} catch (e) {}
+require('bootstrap/dist/js/bootstrap.bundle.min.js');
 
 
 /**

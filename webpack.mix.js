@@ -1,5 +1,5 @@
 const mix = require('laravel-mix');
-
+const webpack = require('webpack');
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -10,13 +10,19 @@ const mix = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
+
+
 mix.autoload({
-    jquery: ['$', 'window.jQuery',"jQuery","window.$","jquery","window.jquery"],
+    jquery: ['$', 'window.jQuery', 'jQuery'],
     'popper.js/dist/umd/popper.js': ['Popper']
-}).js('resources/js/app.js', 'public/js').postCss('resources/css/app.css', 'public/css', [
-    require('postcss-import'),
-    require('tailwindcss'),
-    require('autoprefixer'),
-]);
+}).js('resources/js/app.js', 'public/js')
+    .sass('resources/css/app.scss', 'public/css')
+    .options({
+        postCss: [
+            require('postcss-import'),
+            require('tailwindcss'),
+            require('autoprefixer'),
+        ]
+    });
 
 mix.copyDirectory('resources/img', 'public/img');

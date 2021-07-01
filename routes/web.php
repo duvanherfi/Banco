@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\TransferenciaController;
+use App\Http\Controllers\CuentaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,5 +19,25 @@ Route::redirect('/', '/inicio');
 Route::get('/inicio', function () {
     return view('inicio');
 })->middleware(['auth'])->name('inicio');
+
+Route::get(
+    '/cuentas',
+    [CuentaController::class, 'index']
+)->middleware(['auth'])->name('cuentas');
+
+Route::get(
+    '/transferencias',
+    [TransferenciaController::class, 'index']
+)->middleware(['auth'])->name('transferencias');
+
+Route::get(
+    '/transferencias/registrar',
+    [TransferenciaController::class, 'create']
+)->middleware(['auth'])->name('transferencia_registrar');
+
+Route::post(
+    '/transferencias/registrar',
+    [TransferenciaController::class, 'store']
+)->middleware(['auth'])->name('transferencia_guardar');
 
 require __DIR__.'/auth.php';

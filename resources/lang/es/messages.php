@@ -11,7 +11,7 @@ return [
     'log_out' => 'Cerrar sesión',
     'name' => 'Nombre',
     'email' => 'Correo',
-    'clave_acceso_confirmation' => 'Confirmación de clave de acceso',
+    'password_confirmation' => 'Confirmación de clave de acceso',
     'already_registered' => 'Ya estás registrado?',
     'register' => 'Registrar',
     'errors_title' => '¡Ups! Algo salió mal.'

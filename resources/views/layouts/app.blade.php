@@ -12,14 +12,23 @@
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
         <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
+        <script src="{{ asset('js/app.js') }}"></script>
     </head>
     <body>
         <main>
-            @yield('menu')
+            @section("menu")
+                @include("layouts.navigation")
+            @show
         </main>
 
         <div class="container">
+            @section("miga_de_pan")
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item" aria-current="page">Inicio</li>
+                    </ol>
+                </nav>
+            @show
             @yield('contenido')
         </div>
         @yield('js')

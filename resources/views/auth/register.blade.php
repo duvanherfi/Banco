@@ -1,6 +1,9 @@
 @extends("layouts.app")
 @section('titulo', 'Inicio de Sesión')
 
+@section("miga_de_pan")
+@endsection
+
 @section("contenido")
     <div class="text-center" style="max-width: 330px; padding: 15px; margin: auto;">
 
@@ -10,28 +13,8 @@
             </a>
         </div>
 
-        <div class="row my-1">
-            <!-- Validation Errors -->
-            @if ($errors->any())
-                <div>
-                    <div class="alert alert-danger" role="alert">
-                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:">
-                            <use xlink:href="#exclamation-triangle-fill"/>
-                        </svg>
-                        <div>
-                            <h4 class="alert-heading">
-                                {{ __('messages.errors_title') }}
-                            </h4>
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            @endif
-        </div>
+        @include("layouts.messages")
+
         <div class="row">
             <form method="POST" action="{{ route('register') }}">
                 @csrf

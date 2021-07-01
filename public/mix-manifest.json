@@ -2,5 +2,8 @@
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
     "/img/bank.svg": "/img/bank.svg",
+    "/img/logout.svg": "/img/logout.svg",
+    "/img/money.svg": "/img/money.svg",
+    "/img/transaction.svg": "/img/transaction.svg",
     "/img/user.svg": "/img/user.svg"
 }
