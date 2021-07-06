@@ -33,8 +33,7 @@ npm run dev
 php artisan migrate
 ```
 ### 9. Ejecutar semillas.
-añadir ``` use Illuminate\Support\Facades\DB; ``` en el archivo ubicado en database/seeders/DatabaseSeeder.php
-y ejecutar el siguiente comando:
+ejecutar el siguiente comando:
 ```angular2html
 php artisan db:seed
 ```

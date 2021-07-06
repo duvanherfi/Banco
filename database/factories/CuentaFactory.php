@@ -23,12 +23,10 @@ class CuentaFactory extends Factory
     public function definition()
     {
         return [
-            'saldo' => $this->faker->randomNumber($nbDigits = 6, $strict = false),
+            'saldo' => 10000,
             'numero' => $this->faker->randomNumber($nbDigits = 9, $strict = false),
             'propia' => True,
-            'user_id' => User::all()->random(),
-            'saldo' => 1
-
+            'user_id' => User::all()->random()
         ];
     }
 }
